@@ -1,10 +1,24 @@
-# validate_indents.py
-grade = 93
+# fig03_02.py
+"""Class average program with sentinel-controlled iteration."""
 
-if grade >= 90:
-    print('A')
-    print('Great Job!')
-    print('Take a break from studying')
+# initialization phase
+total = 0  # sum of grades
+grade_counter = 0  # number of grades entered
+
+# processing phase
+grade = int(input('Enter grade, -1 to end: '))  # get one grade
+
+while grade != -1:
+    total += grade
+    grade_counter += 1
+    grade = int(input('Enter grade, -1 to end: '))
+
+# termination phase
+if grade_counter != 0:
+    average = total / grade_counter
+    print(f'Class average is {average:.2f}')
+else:
+    print('No grades were entered')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #

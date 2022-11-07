@@ -1,10 +1,19 @@
-# validate_indents.py
-grade = 93
+# fig03_01.py
+"""Class average program with sequence-controlled repetition."""
 
-if grade >= 90:
-    print('A')
-    print('Great Job!')
-    print('Take a break from studying')
+# initialization phase
+total = 0  # sum of grades
+grade_counter = 0
+grades = [98, 76, 71, 87, 83, 90, 57, 79, 82, 94]  # list of 10 grades
+
+# processing phase
+for grade in grades:  
+    total += grade  # add current grade to the running total
+    grade_counter += 1  # indicate that one more grade was processed
+
+# termination phase
+average = total / grade_counter
+print(f'Class average is {average}')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
